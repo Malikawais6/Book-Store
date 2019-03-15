@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <title>Add New Book</title>
+  </head>
+  <body>
+    <div class="header">
+      <a class="logo">LIBRARY MANAGEMENT SYSTEM</a>
+    </div>
+    <div class="go-back-link">
+      <h2 class="add-new-heading">Add New Book</h2>
+    </div>
+    <div class="input-fields">
+      <input
+        type="text"
+        id="bookName"
+        name="bookName"
+        placeholder="Enter book name"
+      />
+
+      <input
+        type="text"
+        id="authorName"
+        name="authorName"
+        placeholder="Enter author name"
+      />
+
+      <input
+        type="text"
+        id="publisherName"
+        name="publisherName"
+        placeholder="Enter publisher name"
+      />
+
+      <input type="date" id="date" name="date" />
+      <button type="button" onclick="insertBook()" class="button-style-addnew">
+        SUBMIT
+      </button>
+      <button type="button" class="button-style-addnew">
+        <a href="./index.html" class="button-back">BACK</a>
+      </button>
+    </div>
+  </body>
+  <script src="./addbook.js"></script>
+</html>

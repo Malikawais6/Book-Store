@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <title>Library Management System</title>
+  </head>
+  <body>
+    <div class="header">
+      <a class="logo">LIBRARY MANAGEMENT SYSTEM</a>
+    </div>
+    <div class="wrapper-button">
+      <div class="btn-author">
+        <button type="button" class="button-style">
+          <a href="./authors.html">AUTHORS</a>
+        </button>
+      </div>
+      <div class="btn-publisher">
+        <button type="button" class="button-style">
+          <a href="./publishers.html">PUBLISHERS</a>
+        </button>
+      </div>
+      <div class="btn-addbook">
+        <button type="button" class="button-style">
+          <a href="./addbook.html">ADD BOOK</a>
+        </button>
+      </div>
+      <div class="btn-purge">
+        <button
+          type="button"
+          class="button-style"
+          style="width:135px !important"
+          onclick="purgeLibrary()"
+        >
+          PURGE LIBRARY
+        </button>
+      </div>
+    </div>
+
+    <table id="tbl-record">
+      <thead>
+        <tr>
+          <th>BOOK #</th>
+          <th>BOOK TITLE</th>
+          <th>AUTHOR</th>
+          <th>PUBLISHER</th>
+          <th>DATE PUBLISHED</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <input type="text" id="bookId" style="display:none" />
+        <div><h2>Update Record</h2></div>
+
+        <div class="input-fields">
+          <input
+            type="text"
+            id="bookName"
+            name="bookName"
+            placeholder="Enter book name"
+          />
+
+          <input
+            type="text"
+            id="authorName"
+            name="authorName"
+            placeholder="Enter author name"
+          />
+
+          <input
+            type="text"
+            id="publisherName"
+            name="publisherName"
+            placeholder="Enter publisher name"
+          />
+
+          <input type="date" id="date" name="date" />
+          <button
+            type="submit"
+            onclick="updateData()"
+            class="button-modal-style"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
